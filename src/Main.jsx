@@ -10,6 +10,7 @@ function Main() {
         <img
           className="image"
           src="https://img.freepik.com/free-photo/clothing-rack-with-floral-hawaiian-shirts-hangers-hat_23-2149366018.jpg?w=740&t=st=1705389956~exp=1705390556~hmac=6d6a73308337e94708584a4c17305bebfa832139155b99a4c40ce09ecce909ec"
+        alt="Shopping"
         ></img>
       </div>
       <div className="searchcontainer">

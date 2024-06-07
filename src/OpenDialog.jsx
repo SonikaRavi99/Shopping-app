@@ -14,7 +14,7 @@ const data = [
   },
   {
     image:
-      "https://www.beyours.in/cdn/shop/files/classic-black-shirt-1_1200x1200_crop_center.jpg?v=1696433287",
+      "https://st.mngbcn.com/rcs/pics/static/T6/fotos/S20/67024450_50.jpg?ts=1703689384071&imwidth=360&imdensity=2",
     Name: "Shirt",
   },
   {
@@ -41,7 +41,7 @@ const [openDialog, setOpenDialog] = useState(false);
               style={{ marginRight: 20, cursor:"pointer" }}
               onClick={() => setOpenDialog(true)}
             >
-              <img className="card-image" src={item.image} alt="Image"></img>
+              <img className="card-image" src={item.image} alt="cloths"></img>
               <p>{item.Name}</p>
             </div>
           );

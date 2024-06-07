@@ -6,8 +6,6 @@ import Card from "./Card";
 import "./ViewProducts.css";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
-import { styled } from "@mui/material/styles";
 import {
   Accordion,
   AccordionDetails,
@@ -15,10 +13,7 @@ import {
   Checkbox,
   FormControlLabel,
   FormGroup,
-  TextField,
   Typography,
-  Radio,
-  RadioGroup,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Rating from "@mui/material/Rating";
@@ -28,13 +23,10 @@ export default function ViewProducts({ openDialog, setOpenDialog }) {
   const [brands, setBrands] = useState([]);
   const rating = ["5", "4", "3"];
   const [brandChange, setBrandChange] = useState([]);
-  const [selectedBrand, setSelectedBrand] = useState("");
   const [brandSelectedData, setBrandSelectedData] = useState();
   const [priceChange, setPriceChange] = useState([]);
-  const [selectedprice, setSelectedPrice] = useState();
-  const [priceSelectedData, setPriceSelectedData] = useState("");
+  const [priceSelectedData, setPriceSelectedData] = useState('');
   const [ratingChange, setRatingChange] = useState([]);
-  const [selectedRating, setSelectedRating] = useState("");
 
   const handleSearch = (e) => {
     const filterData = data?.filter((item) => {
@@ -46,14 +38,14 @@ export default function ViewProducts({ openDialog, setOpenDialog }) {
   useEffect(() => {
     setBrandSelectedData(data);
     setPriceSelectedData(data);
-  }, [data]);
+  }, []);
 
   useEffect(() => {
     setFilteredItem(data);
     const brand = data?.map((item) => item.brand);
     const uniqueBrands = Array.from(new Set(brand));
     setBrands(uniqueBrands);
-  }, [data]);
+  }, []);
 
   useEffect(() => {
     if (brandChange?.length === 0) {
@@ -66,7 +58,7 @@ export default function ViewProducts({ openDialog, setOpenDialog }) {
       setFilteredItem(filterdBrand);
       setBrandSelectedData(filterdBrand);
     }
-  }, [selectedBrand, brandChange]);
+  }, [ brandChange]);
 
   const handleBrandChange = (e) => {
     const value = e.target.value;
@@ -124,7 +116,7 @@ export default function ViewProducts({ openDialog, setOpenDialog }) {
 
       setFilteredItem(filteredBrand);
     }
-  }, [ratingChange, selectedRating]);
+  }, [ratingChange, priceSelectedData]);
 
   const handleRatingChange = (e) => {
     const value = e.target.value;

@@ -1,4 +1,3 @@
-import { Padding } from "@mui/icons-material";
 import React, { useState } from "react";
 import "./ViewProducts.css"
 import Rating from '@mui/material/Rating';
