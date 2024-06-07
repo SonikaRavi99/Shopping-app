@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ViewProducts.css"
 import Rating from '@mui/material/Rating';
 
 function Card({ data }) {
-  const [isHover, setIsHover] = useState(false);
-
   return data?.map((item) => {
     return (
-      <div className="cardstyle" style={{margin:18}} onClick={() => setIsHover(true)}>
+      <div className="cardstyle" style={{margin:18}} >
        
         <div className="imageContainer">
        <img 
